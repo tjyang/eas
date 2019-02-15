@@ -3,14 +3,14 @@
 
 Summary:	Enterprise Audit Shell
 Name: eas
-Version: 2.1.0
+Version: 2.0.0
 Release: 1%{dist}
 License: LGPL
 Group: Applications/System
 URL: 		https://github.com/asquelt/eas
 BuildRequires:	openssl-devel
 Requires:	bash
-Source0:        https://github.com/asquelt/%{name}/archive/%{version}.tar.gz
+Source0:        https://github.com/asquelt/%{name}/archive/%{name}-%{version}.tar.gz
 Source1:	eas.profile
 Source2:	easd.init
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -47,7 +47,7 @@ This package contains the client (shell) portion.
 
 %prep
 %setup -q
-rm certs/mkcerts.noninteractive
+#rm certs/mkcerts.noninteractive
 
 %build
 #%configure
